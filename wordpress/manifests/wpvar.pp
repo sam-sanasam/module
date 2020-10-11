@@ -30,7 +30,7 @@ class wordpress::wpvar inherits wordpress {
 	exec{"wget https://wordpress.org/latest.zip": 
 	path=> "/usr/bin", 
 	cwd=> "/tmp", 
-	creates =>"/tmp/latest.zip" 
+	creates =>"/tmp/latest" 
 	}
 
 
@@ -49,7 +49,7 @@ class wordpress::wpvar inherits wordpress {
 	exec{"wget https://gitlab.com/roybhaskar9/devops/raw/master/coding/chef/chefwordpress/files/default/wp-config-sample.php -O wp-config.php":  
 	path=>"/usr/bin", 
 	cwd=> "/var/www/html/wordpress/", 
-	creates=> "/var/www/html/wordpress/wp-config.php" 
+	creates=> "/var/www/html/wordpress/wp-config" 
 	}
 
 
