@@ -40,7 +40,7 @@ class wordpress::wpvar inherits wordpress {
 	 }
 
 
-	exec{"unzip /tmp/latest.zip -d /var/www/html":
+	exec{"unzip /tmp/latest.zip -d /var/www/html/":
 	path=> "/usr/bin", 
 	creates =>"/var/www/html/wordpress/index.php" 
 	}
